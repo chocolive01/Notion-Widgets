@@ -270,7 +270,6 @@ function calendari(widget, data)
         fila.innerHTML += '<th>' + dies_abr[i] + '</th>';
     }
 
-    fila.innerHTML += '<th>' + dies_abr[0] + '</th>';
     e.appendChild(fila);
 
     /* Obtinc el dia que va acabar el mes anterior */
@@ -279,7 +278,7 @@ function calendari(widget, data)
 
     var actual = new Date(data.getFullYear(),
 			  data.getMonth(),
-			  -inici_mes);
+			  1-inici_mes);
 
     /* 6 setmanes per cobrir totes les posiblitats
      *  Quedaria mes consistent alhora de mostrar molts mesos 
@@ -288,7 +287,7 @@ function calendari(widget, data)
     {
         var fila = document.createElement('tr');
 
-        for(var d = 1; d < 8; d++)
+        for(var d = 0; d < 7; d++)
         {
 	    var cela = document.createElement('td');
 	    var span = document.createElement('span');
