@@ -92,6 +92,11 @@ td>span {
     transition: border 0.3s ease;
 }
 
+td:nth-child(1) > span,  /* Sunday */
+td:nth-child(7) > span { /* Saturday */
+    color: #FACDDF;
+}
+
 td:nth-child(even)>span {
     background-color: rgba(0,0,0,0.02);
 }
